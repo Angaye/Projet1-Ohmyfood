@@ -1,0 +1,59 @@
+@mixin base-shadow{
+    box-shadow: 2px 1px 8px -3px #000000;
+}
+@mixin transform-zoum{
+    transform: scale(1.02);
+}
+@mixin heart-position{
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 0.2rem;
+
+                
+}
+@mixin heart-400{
+    display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 400; 
+        content: "\f004";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: inherit;
+        -webkit-background-clip: text;
+        background-clip:text ;
+        opacity: 1;
+        transition: all 200ms ease-in-out;
+}
+@mixin heart-900{
+    display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";  
+        content: "\f004";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: inherit;
+        -webkit-background-clip: text;
+        background-clip:text ;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+        background-image: linear-gradient(to top,#9356DC,#FF79DA);
+        color: transparent;
+        font-weight: 900;
+        
+}

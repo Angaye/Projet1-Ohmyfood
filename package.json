@@ -1,0 +1,11 @@
+{
+  "name": "ohmyfood-projet2",
+  "version": "1.0.0",
+  "description": "Prjet2 basé sur annimation et scss/openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "author": "ANGAE SANDRINE",
+  "license": "ISC"
+}

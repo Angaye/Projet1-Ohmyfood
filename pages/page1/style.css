@@ -1,0 +1,123 @@
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0px 3px 3px 1px grey;
+  padding: 0.3rem;
+  margin: 0;
+  position: relative;
+}
+
+main .container .bloc-generale {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  position: relative;
+  top: -4rem;
+}
+main .container .bloc-generale .big-title {
+  position: relative;
+}
+main .container .bloc-generale .big-title::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+main .container .bloc-generale .big-title::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  color: transparent;
+  font-weight: 900;
+}
+main .container .bloc-generale .big-title:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+main .container .bloc-generale .big-title h2 {
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+main .container img {
+  height: 400px;
+  width: 100%;
+  padding: 0.2rem;
+  background-image: center;
+}
+main .container .bloc {
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 800px) {
+  main .container .bloc {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+main .container .bloc .bloc-element .titre {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+main .container .bloc .bloc-element .titre::before {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 3rem;
+  background-color: #99E2d0;
+  bottom: -0.3rem;
+}
+main .container .bloc .bloc-element-1 {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  box-shadow: 2px 1px 8px -3px #000000;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+main .container .bloc .bloc-element-1 .prix {
+  position: relative;
+  top: 1.5rem;
+  padding: 0;
+}
+main .container .bloc .bloc-element-1 p {
+  padding: 0 1rem;
+}
+main .container .bloc .bloc-element strong {
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

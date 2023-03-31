@@ -1,0 +1,95 @@
+ @use "../utils/colors";
+ @use "../utils/mixins";
+
+ .restaurant {
+     a {
+         text-decoration: none;
+         color: inherit;
+     }
+
+     width: 100%;
+     background-color: #f6f6f6;
+     padding: 1rem;
+     margin-bottom: 2rem;
+     .restorant-1,
+     .restorant-2 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 1rem;
+
+         & .resto {
+             background-color: white;
+             width: 45%;
+             border: 1px solid white;
+             border-radius: 1em;
+             position: relative;
+             & img {
+                 width: 100%;
+                 border-radius: 1em 1em 0 0;
+             }
+
+             .description {
+                 position: relative;
+
+                 h3,
+                 p {
+                     margin: 0.5rem;
+                     flex-wrap: wrap;
+                 }
+                 i{
+                    @include mixins.heart-position;
+
+                }
+                .fa-solid{
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    background-image: linear-gradient(to top,colors.$purple,colors.$rose);
+                    color: transparent;
+                    opacity: 0;
+                    transition: all 200ms ease-in-out;
+
+                }
+                &:hover .fa-solid{
+                    opacity: 1;
+                    transform: translateY(-50%) scale(1.1);
+                }
+    
+                 
+                
+             }
+         }
+
+         @media (max-width:800px) {
+             flex-direction: column;
+             width: 100%;
+
+             .resto {
+                 width: 100%;
+             }
+         }
+     }
+
+     .restorant-1 {
+         margin-bottom: 1rem; 
+         .new{
+            position: relative;
+        }  
+        .new::before{
+            content: "Nouveau";
+            height: 2rem;
+            width: 4rem;
+            background-color: colors.$bleu-clair;
+            position: absolute;
+            right: 1rem;
+            top:1rem;
+            color: darken(colors.$bleu-clair, 50%);
+            display: grid;
+            place-items: center;
+        }
+     }
+    
+     
+
+
+ }
