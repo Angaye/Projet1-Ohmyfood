@@ -233,6 +233,27 @@ footer p a {
     transform: rotate(0);
   }
 }
+#fleche a {
+  text-decoration: none;
+  color: inherit;
+}
+#fleche header::before {
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  content: "\f060";
+  font-weight: 900;
+  position: absolute;
+  left: 1rem;
+  text-decoration: none;
+}
+
 .image img {
   display: block;
   width: 100%;
@@ -281,6 +302,7 @@ footer p a {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+  font-weight: 900;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   content: "\f004";
@@ -296,7 +318,6 @@ footer p a {
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   color: transparent;
-  font-weight: 900;
 }
 .globale .gros h2:hover::after {
   opacity: 1;

@@ -3,7 +3,6 @@
 @use "../utils/animation-check";
 
 
-
 @keyframes animation-check{
    0%{
        transform: rotate(-270deg);
@@ -12,6 +11,17 @@
        transform: rotate(0);
    }
 }
+#fleche{
+   a{
+      text-decoration: none;
+      color: inherit;
+   }
+   header::before{
+      @include mixins.font-awesome;
+      text-decoration: none;
+   }
+}
+
  .image img{
    display: block;
     width: 100%;
