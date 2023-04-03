@@ -3,15 +3,17 @@
 @use "../utils/animation-check";
 
 
-@keyframes animation-check{
-   0%{
-       transform: rotate(-270deg);
-   }
-   100%{
-       transform: rotate(0);
-   }
-}
+
+
 #fleche{
+   header{
+      &::before{
+         transition: transform 200ms;
+      }
+   }
+   header:hover::before{
+      @include mixins.transform-zoum(1.2,translateY(-50%));
+   }
    a{
       text-decoration: none;
       color: inherit;
@@ -84,12 +86,20 @@ background-color: white;
          .group{
             overflow: hidden;
             .menu-items{
+               $nomberOfItems:3;
+               @for $i from 1 through  $nomberOfItems{
+                     &:nth-child(#{$i}) {
+                        animation-delay: 100ms * $i;
+                     }
+               }
                background-color: white;
                border-radius: 1rem;
                display: flex;
                overflow: hidden;
-               margin: 0.5rem;               
+               margin: 0.5rem; 
                @include mixins.base-shadow;
+               animation: annimation-petitBloc 1s;
+               animation-fill-mode: both;               
                &-description{
                   padding: 1rem;
                   overflow: hidden;

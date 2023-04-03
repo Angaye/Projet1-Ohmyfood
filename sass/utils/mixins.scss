@@ -2,8 +2,8 @@
 @mixin base-shadow{
     box-shadow: 2px 1px 8px -3px #000000;
 }
-@mixin transform-zoum{
-    transform: scale(1.02);
+@mixin transform-zoum($zoum-defaut: 1.02, $transformation:none){
+    transform: $transformation scale($zoum-defaut) ;
 }
 @mixin heart-position{
     position: absolute;

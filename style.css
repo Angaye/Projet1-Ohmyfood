@@ -106,7 +106,7 @@ header {
   transform: translateY(-50%);
 }
 .tuto li:hover {
-  transform: scale(1.02);
+  transform: none scale(1.02);
 }
 .tuto li i {
   margin-right: 1rem;
@@ -225,13 +225,21 @@ footer p a {
   text-decoration: none;
 }
 
-@keyframes animation-check {
+@keyframes annimation-petitBloc {
   0% {
-    transform: rotate(-270deg);
+    transform: translateY(50%);
+    opacity: 0;
   }
   100% {
-    transform: rotate(0);
+    transform: translateY0(0);
+    opacity: 1;
   }
+}
+#fleche header::before {
+  transition: transform 200ms;
+}
+#fleche header:hover::before {
+  transform: translateY(-50%) scale(1.2);
 }
 #fleche a {
   text-decoration: none;
@@ -359,6 +367,17 @@ footer p a {
   overflow: hidden;
   margin: 0.5rem;
   box-shadow: 2px 1px 8px -3px #000000;
+  animation: annimation-petitBloc 1s;
+  animation-fill-mode: both;
+}
+.globale .menu-grid .group .menu-items:nth-child(1) {
+  animation-delay: 100ms;
+}
+.globale .menu-grid .group .menu-items:nth-child(2) {
+  animation-delay: 200ms;
+}
+.globale .menu-grid .group .menu-items:nth-child(3) {
+  animation-delay: 300ms;
 }
 .globale .menu-grid .group .menu-items-description {
   padding: 1rem;
