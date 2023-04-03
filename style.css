@@ -9,6 +9,7 @@
 body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
 main {
@@ -223,6 +224,14 @@ footer p a {
   text-decoration: none;
 }
 
+@keyframes animation-check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .image img {
   display: block;
   width: 100%;
@@ -232,18 +241,21 @@ footer p a {
   margin-bottom: 0;
 }
 
-.gros {
+.globale {
+  background-color: white;
+}
+.globale .gros {
   border-radius: 1rem 1rem 0 0;
   position: relative;
-  top: -2rem;
-  background: white;
+  margin-top: -2rem;
+  background-color: white;
   padding: 1rem;
 }
-.gros h2 {
+.globale .gros h2 {
   font-family: "Shrikhand", cursive;
   position: relative;
 }
-.gros h2::before {
+.globale .gros h2::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -263,7 +275,7 @@ footer p a {
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-.gros h2::after {
+.globale .gros h2::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -285,24 +297,99 @@ footer p a {
   color: transparent;
   font-weight: 900;
 }
-.gros h2:hover::after {
+.globale .gros h2:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
-
-.menu-grid {
-  background-color: yellow;
+.globale .menu-grid {
+  background-color: white;
   display: grid;
   margin: 1rem;
+  gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
 }
 @media (max-width: 800px) {
-  .menu-grid {
+  .globale .menu-grid {
     grid-template-columns: 1fr;
   }
 }
-.menu-grid > * {
-  border: 1px solid red;
+.globale .menu-grid h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+.globale .menu-grid h3::before {
+  content: "";
+  width: 3rem;
+  height: 0.2rem;
+  left: 0;
+  top: 1.5rem;
+  background-color: #99E2d0;
+  position: absolute;
+}
+.globale .menu-grid .group {
+  overflow: hidden;
+}
+.globale .menu-grid .group .menu-items {
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  overflow: hidden;
+  margin: 0.5rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+}
+.globale .menu-grid .group .menu-items-description {
+  padding: 1rem;
+  overflow: hidden;
+}
+.globale .menu-grid .group .menu-items-description h4, .globale .menu-grid .group .menu-items-description p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.globale .menu-grid .group .menu-items .prix {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+.globale .menu-grid .group .menu-items .menu-items-check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background-color: #99E2d0;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 0.5s;
+  border-radius: 0 1rem 1rem 0;
+}
+.globale .menu-grid .group .menu-items .menu-items-check i {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 1rem;
+  color: #99E2d0;
+}
+.globale .menu-grid .group .menu-items:hover .menu-items-check {
+  margin-right: 0;
+}
+.globale .menu-grid .group .menu-items:hover i {
+  animation: animation-check 0.5s ease-in-out;
+}
+@keyframes animation-check {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.globale .menu-grid .group .menu-items p, .globale .menu-grid .group .menu-items h4, .globale .menu-grid .group .menu-items h3 {
+  padding: 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

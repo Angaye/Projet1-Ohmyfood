@@ -1,4 +1,17 @@
 @use "../utils/mixins";
+@use "../utils/colors";
+@use "../utils/animation-check";
+
+
+
+@keyframes animation-check{
+   0%{
+       transform: rotate(-270deg);
+   }
+   100%{
+       transform: rotate(0);
+   }
+}
  .image img{
    display: block;
     width: 100%;
@@ -7,14 +20,17 @@
     object-position: center bottom;
     margin-bottom: 0;
 }
+.globale{
+
+background-color: white;
+
  .gros{
    border-radius: 1rem 1rem 0 0;
    position: relative;
-   top: -2rem;
-   background: white;
+   margin-top: -2rem;
+   background-color: white;
    padding: 1rem;
-
-    h2{
+       h2{
        font-family: 'Shrikhand', cursive;
        position: relative;
        &::before{
@@ -29,15 +45,95 @@
          }
       }
    }
-   .menu-grid{
-      background-color: yellow;
-      display: grid;
-      margin: 1rem;
-      grid-template-columns: repeat(3,1fr);
-      @media (max-width:800px) {
-         grid-template-columns: 1fr;
-      }
-      &>*{
-         border: 1px solid red;
+   
+        .menu-grid{
+         background-color: white;
+         display: grid;
+         margin: 1rem;
+         gap: 1rem;
+         grid-template-columns: repeat(3,1fr);
+         @media (max-width:800px) {
+            grid-template-columns: 1fr;
+         }
+         h3{
+            text-transform: uppercase;
+            font-weight: 400;
+            position: relative;
+            &::before{
+               content: "";
+               width: 3rem;
+               height: 0.2rem;
+               left: 0;
+               top: 1.5rem;
+               background-color:colors.$bleu-clair ;
+               position: absolute;
+               
+            }
+         }
+      
+         .group{
+            overflow: hidden;
+            .menu-items{
+               background-color: white;
+               border-radius: 1rem;
+               display: flex;
+               overflow: hidden;
+               margin: 0.5rem;               
+               @include mixins.base-shadow;
+               &-description{
+                  padding: 1rem;
+                  overflow: hidden;
+                  h4,p{
+                     overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  }
+               }
+               .prix{
+                  margin-left: auto;
+                  font-weight: 900;
+                  padding: 1rem;
+                  display: flex;
+                  align-items: flex-end;
+               }
+               .menu-items-check{
+                  display: grid;
+                  place-items: center;
+                  $button-width: 4rem;
+                  flex-shrink: 0;
+                  background-color:colors.$bleu-clair ;
+                  margin-right: -4rem;
+                  width: 4rem;
+                  transition: margin-right 0.5s;
+                  border-radius: 0 1rem 1rem 0;
+                  i{
+                     display: grid;
+                     place-items: center;
+                     width: 2rem;
+                     aspect-ratio: 1;
+                     background-color: white;
+                     border-radius: 1rem;
+                     color:colors.$bleu-clair ;
+                  }
+               }
+               &:hover {
+
+                  .menu-items-check{
+                     margin-right: 0;
+                  }
+                  i{
+                     @include animation-check.animation-check;
+                     animation: animation-check 0.5s ease-in-out ;
+                  }
+               }
+               p,h4,h3{
+                  padding: 0;
+                  margin: 0;
+               }
+            }
+         }
       }
    }
+
+
+   
