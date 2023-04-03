@@ -117,7 +117,7 @@ background-color: white;
                   }
                }
                &:hover {
-
+                 cursor: pointer;
                   .menu-items-check{
                      margin-right: 0;
                   }
@@ -132,6 +132,14 @@ background-color: white;
                }
             }
          }
+      }
+      section.commande{
+       height: 20vh;
+       display: grid;
+       place-items: center;
+       button{
+         @include mixins.button;
+       }
       }
    }
 
