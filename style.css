@@ -122,6 +122,11 @@ header {
   font-family: "Shrikhand", cursive;
   font-size: 4rem;
 }
+@media (max-width: 800px) {
+  .loader p {
+    font-size: 1.6rem;
+  }
+}
 
 .tuto {
   counter-reset: steps;
@@ -313,6 +318,11 @@ footer p a {
 }
 .loader1 .ani .text {
   font-size: 4rem;
+}
+@media (max-width: 800px) {
+  .loader1 .ani .text {
+    font-size: 1.5rem;
+  }
 }
 .loader1 .ani .boule {
   display: flex;

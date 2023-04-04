@@ -26,6 +26,11 @@
       .text{
          font-size: 4rem;
       }
+      @media (max-width:800px) {
+         .text{
+            font-size: 1.5rem;
+         }
+      }
       .boule{
          display: flex;
          .ball{

@@ -44,4 +44,9 @@
         font-size: 4rem;
     
     }
+    @media (max-width:800px) {
+        p{
+           font-size: 1.6rem;
+        }
+     }
 }
