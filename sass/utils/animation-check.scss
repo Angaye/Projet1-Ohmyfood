@@ -18,3 +18,24 @@
         opacity: 1;
     }
 }
+@mixin animation-pageIndex{
+    @keyframes animation-pageIndex{
+        0%{
+            transform: scale(1);
+        }
+        100%{
+            transform: scale(0);
+        }
+    }
+}
+@keyframes telechargement{
+    0%{
+        transform: translateY(-100%);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}

@@ -1,5 +1,6 @@
 @use "../utils/mixins";
 @use "../utils/colors";
+@use "../utils/animation-check";
 .explorer{
     text-align: center;
     & h2{
@@ -26,7 +27,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: dispersion 200ms;
+    @include animation-check.animation-pageIndex;
+    animation: animation-pageIndex 200ms;
     animation-fill-mode: forwards;
     transform-origin: top;
     animation-delay: 3s;
@@ -41,13 +43,5 @@
         font-family: 'Shrikhand', cursive;
         font-size: 4rem;
     
-    }
-}
-@keyframes dispersion{
-    0%{
-        transform: scale(1);
-    }
-    100%{
-        transform: scale(0);
     }
 }
